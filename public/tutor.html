@@ -1,0 +1,201 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Code Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="favicon icon" href="assets/images/favicon.png" />
+    <!------Google Fonts--->
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!------CSS--->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="./assets/js/firebase.js"></script>
+
+    <script src="./assets/js/survey.js" ></script>
+    <!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+    <title>Survey</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper black">
+            <!-- <a href="/" class="brand-logo"><img src="assets/images/code_match_logo_web_100_height.png" alt="Code.Match Logo"></a> -->
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a class="menu" href="/">Home</a></li>
+                <li><a class="menu" href="/about-us">About Us</a></li>
+                <li><a class="menu" href="/tutor">Become A Tutor</a></li>
+                <li><a class="menu" href="/login">Login</a></li>
+                <li><a class="menu" href="/signup">Sign Up</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class='card-panel white col s12 center-align'>
+            <h4><strong>Step up your coding game today by connecting with our handpicked team of uniquely talented programming professionals.</strong></h4>
+            <div class='card-panel center-align white'>
+                <h5><strong>Answer a few short questions so that we can find out more about your unique coding needs</strong></h5>
+                <br>
+                <div class="row">
+                    <div class="col s6">
+                        <input id="name" type="text" class="validate" required>
+                        <label class='active' for="name">Name</label>
+                    </div>
+                    <div class="col s6">
+                        <input id="userName" type="text" class="validate" required>
+                        <label class='active' for="userName">User Name</label>
+                    </div>
+                    <div class="col s12 marginTopBottom20"></div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>What are your tutoring goals?</strong></h6>
+                        <p>I am learning to code so that it will help me land my dream job.</p>
+                        <select data-placeholder="" class="browser-default" id="q1">
+                            <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>   
+                        </select>
+                    </div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>Development Foundation Skills</strong></h6>
+                        <p>I am still learning the Development Foundation Skills needed as a developer.</p>
+                        <select data-placeholder="" class="browser-default" id="q2">
+                              <option value="">Choose an option</option>
+                           <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s12 divider marginTopBottom20"></div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I am a pro at mastering the Development Foundation Skills.</strong></h6>
+                        <p>I already mastered the basics, but I still can't code.</p>
+                        <select data-placeholder="" class="browser-default" id="q3">
+                            <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I am working on an assingment or project for work that is due immeditely.</strong></h6>
+                        <p>I am ready to begin learning within a few days or less.</p>
+                        <select data-placeholder="" class="browser-default" id="q4">
+                           <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s12 divider marginTopBottom20"></div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I prefer online sessions, as I am a quick learner.</strong></h6>
+                        <p>I have been coding and freelancing on my own and just looking to strengthen my skill set.</p>
+                        <select data-placeholder="" class="browser-default" id="q5">
+                     <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I prefer in-person tutoring.</strong></h6>
+                        <p>Online Tutorials or Tutoring Sessions are not for me. </p>
+                        <select data-placeholder="" class="browser-default" id="q6">
+                       <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s12 divider marginTopBottom20"></div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I have been coding for years and my goal is to keep current on new trends.</strong></h6>
+                        <p>I see myself as an advanced coder.</p>
+                        <select data-placeholder="" class="browser-default" id="q7">
+                            <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I prefer evenings and that's when I feel the most refreshed.</strong></h6>
+                        <p>I am available for tutoring most evenings from 6 p.m. to 10 p.m.</p>
+                        <select data-placeholder="" class="browser-default" id="q8">
+                             <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s12 divider marginTopBottom20"></div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I am an early bird and I feel the most refreshed in the mornings.</strong></h6>
+                        <p>I am available for tutoring most mornings from 8 a.m. to 11 a.m.</p>
+                        <select data-placeholder="" class="browser-default" id="q9">
+                           <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col s5 marginTopBottom10">
+                        <h6><strong>I joined a coding bootcamp and I need additional help with learning new concepts and assignments.</strong></h6>
+                        <p>I'm learning to code for school or a coding bootcamp.</p>
+                        <select data-placeholder="" class="browser-default" id="q10">
+                            <option value="">Choose an option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral) </option>
+                            <option value="4">4 (Agree) </option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <!----End questions---->
+                    <br>
+                    <div class="col s12 marginTopBottom10">
+                        <button type="submit" id="submitTutorBtn" class="dark-orange darken-4 waves-effect waves-light btn">Submit
+                            <i class="material-icons right">send</i></button>
+                    </div>
+
+                </div>
+                <!----End Row-->
+            </div>
+            <!----End Inner Card-->
+        </div>
+        <!----End Outer Card-->
+    </div>
+    <!----End Container Card-->
+</body>
+
+</html>
